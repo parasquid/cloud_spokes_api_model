@@ -1,7 +1,7 @@
 class CloudSpokes::ApiModel
   include ActiveModel::Model
 
-  ENDPOINT_EXPIRY = APP_CONFIG[:expiry]
+  ENDPOINT_EXPIRY = CloudSpokes::APP_CONFIG[:expiry]
 
   # Implements the has_many relationship
   # Passing :parent as an option allows modification of the calling class
@@ -89,7 +89,7 @@ class CloudSpokes::ApiModel
     endpoint = "#{api_endpoint}/#{entities.join('/')}"
     Rails.logger.debug "calling api endpoint #{endpoint}"
     Rails.cache.fetch("#{endpoint}", expires_in: ENDPOINT_EXPIRY.minutes) do
-      Hashie::Mash.new(JSON.parse(RestClient.get "#{endpoint}"))
+      ::Hashie::Mash.new(JSON.parse(::RestClient.get "#{endpoint}"))
       .response # we're only interested in the response portion of the reply
     end
   end

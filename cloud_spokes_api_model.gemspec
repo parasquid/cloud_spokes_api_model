@@ -18,6 +18,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 3.2.8"
   s.add_dependency "activemodel", "~> 3.2.8"
+  s.add_dependency "hashie", "~> 1.2"
+  s.add_dependency "rest-client", "~> 1.6.7"
 
   s.add_development_dependency "sqlite3"
 end
