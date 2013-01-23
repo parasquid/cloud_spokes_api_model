@@ -1,10 +1,11 @@
 PATH
   remote: .
   specs:
-    cloud_spokes_api_model (0.0.1)
-      activemodel (~> 3.2.8)
-      hashie (~> 1.2.0)
-      rails (~> 3.2.8)
+    cloud_spokes_api_model (0.1.0)
+      activemodel (~> 3)
+      hashie (~> 1.2)
+      rails (~> 3)
+      rest-client (~> 1.6.7)
 
 GEM
   remote: http://rubygems.org/
@@ -79,6 +80,8 @@ GEM
     rake (10.0.1)
     rdoc (3.12)
       json (~> 1.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     sprockets (2.2.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
