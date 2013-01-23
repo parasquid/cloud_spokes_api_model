@@ -10,14 +10,14 @@ Gem::Specification.new do |s|
   s.authors     = ["Tristan Gomez"]
   s.email       = ["tristan.gomez@gmail.com"]
   s.homepage    = ""
-  s.summary     = "Abstract API Model for interacting with the CloudSpokes API"
-  s.description = "Abstract API Model for interacting with the CloudSpokes API"
+  s.summary     = "Models for interacting with the CloudSpokes API"
+  s.description = "Models for interacting with the CloudSpokes API"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 3.2.8"
-  s.add_dependency "activemodel", "~> 3.2.8"
+  s.add_dependency "rails", "~> 3"
+  s.add_dependency "activemodel", "~> 3"
   s.add_dependency "hashie", "~> 1.2"
   s.add_dependency "rest-client", "~> 1.6.7"
 
