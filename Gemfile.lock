@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cloud_spokes_api_model (0.1.0)
+    cloud_spokes_api_model (0.1.1)
       activemodel (~> 3)
       hashie (~> 1.2)
       rails (~> 3)
