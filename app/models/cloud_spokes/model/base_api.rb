@@ -68,7 +68,8 @@ class CloudSpokes::Model::BaseApi
   # Finds an entity
   def self.find(entity)
     Rails.logger.info "========== running find for #{entity} for #{self.name}"
-    Kernel.const_get(self.name).new(raw_get entity)
+    c = self.name.to_s.split("::").inject(Object) { |n,c| n.const_get c }
+    c.new(raw_get entity)
   end
 
   # Wrap initialize with a sanitation clause

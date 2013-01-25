@@ -62,11 +62,11 @@ class CloudSpokes::Model::Challenge < CloudSpokes::Model::BaseApi
 
   # Returns all the closed challenges
   def self.closed
-    request(:get, 'closed', {}).map {|challenge| Challenge.new challenge}
+    request(:get, 'closed', {}).map {|challenge| CloudSpokes::Model::Challenge.new challenge}
   end
 
   def self.open
-    request(:get, '', {}).map {|challenge| Challenge.new challenge}
+    request(:get, '', {}).map {|challenge| CloudSpokes::Model::Challenge.new challenge}
   end
 
   def self.all
@@ -75,7 +75,7 @@ class CloudSpokes::Model::Challenge < CloudSpokes::Model::BaseApi
 
   # Returns all the recent challenges
   def self.recent
-    request(:get, 'recent', {}).map {|challenge| Challenge.new challenge}
+    request(:get, 'recent', {}).map {|challenge| CloudSpokes::Model::Challenge.new challenge}
   end
 
   # Return an object instead of a string
